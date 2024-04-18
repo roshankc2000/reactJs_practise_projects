@@ -10,12 +10,18 @@ const App = () => {
     setTask(received_data.target.value);
   };
 
-  const addListOfItems = (received_data) => {
+  const addListOfItems = () => {
     setList((oldItems) => {
       return [...oldItems, newInputTask];
     });
     // Reseting newInputTask to empty after adding task
     setTask("");
+  };
+  const resetListOfItems = () => {
+    // resets the array to to empty i.e. all list deleted as once
+    setList(() => {
+      return [];
+    });
   };
 
   const deleteItem = (id) => {
@@ -32,9 +38,8 @@ const App = () => {
       <div className="main_div">
         <div className="center_div">
           <br />
-          <h1>💡 My Todo List App ✅ </h1>
+          <h1 className="App_title">💡 My Todo List App ✅ </h1>
           <br />
-
           <input
             type="text"
             placeholder="Add new item"
@@ -42,7 +47,10 @@ const App = () => {
             value={newInputTask}
           />
           <button onClick={addListOfItems}> + </button>
-
+          <br />
+          <button className="reset" onClick={resetListOfItems}>
+            RESET
+          </button>
           <ol>
             {list.map((itemValue, index) => {
               // return <li>{itemValue}</li>;
