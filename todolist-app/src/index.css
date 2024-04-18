@@ -42,19 +42,23 @@ input {
   outline: none;
 }
 button {
-  min-height: 40px;
-  width: 40px;
+  min-height: 50px;
+  width: 50px;
   border-radius: 50%;
-  border-color: #8566aa;
+  background-color: #8566aa;
   color: #fff;
   font-size: 40px;
   border: none;
   outline: none;
   margin-left: 10px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  /* box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.5); */
 }
 button:hover {
-  background-color: #20bf6b;
+  background-color: #9678ba;
+}
+button:active {
+  background-color: #8566aa;
 }
 ol {
   margin-top: 30px;
