@@ -18,6 +18,15 @@ const App = () => {
     setTask("");
   };
 
+  const deleteItem = (id) => {
+    setList((oldItems) => {
+      return oldItems.filter((arrElem, index) => {
+        // here it checks id if id is match it will be filtered (removed)
+        return index !== id;
+      });
+    });
+  };
+
   return (
     <>
       <div className="main_div">
@@ -35,11 +44,16 @@ const App = () => {
           <button onClick={addListOfItems}> + </button>
 
           <ol>
-            {list.map((itemValue) => {
-              {
-                /* return <li>{itemValue}</li>; */
-              }
-              return <TodoList task={itemValue} />;
+            {list.map((itemValue, index) => {
+              // return <li>{itemValue}</li>;
+              return (
+                <TodoList
+                  task={itemValue}
+                  key={index}
+                  id={index}
+                  onSelect={deleteItem}
+                />
+              );
             })}
           </ol>
         </div>
