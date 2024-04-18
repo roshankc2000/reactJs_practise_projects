@@ -11,11 +11,17 @@ const App = () => {
   };
 
   const addListOfItems = () => {
-    setList((oldItems) => {
-      return [...oldItems, newInputTask];
-    });
-    // Reseting newInputTask to empty after adding task
-    setTask("");
+    // logic to prevent empty spaces or whitespaces
+    let cleanData = newInputTask.trim();
+    if (cleanData == "") {
+      alert("empty input: Try again");
+    } else {
+      setList((oldItems) => {
+        return [...oldItems, newInputTask];
+      });
+      // Reseting newInputTask to empty after adding task
+      setTask("");
+    }
   };
   const resetListOfItems = () => {
     // resets the array to to empty i.e. all list deleted as once
