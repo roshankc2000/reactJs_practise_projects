@@ -3,7 +3,7 @@ import { useState } from "react";
 import TodoList from "./TodoList";
 
 const App = () => {
-  const [newInputTask, setTask] = useState();
+  const [newInputTask, setTask] = useState("");
   const [list, setList] = useState([]);
 
   const itemChange = (received_data) => {
