@@ -13,7 +13,7 @@ const App = () => {
   const addListOfItems = () => {
     // logic to prevent empty spaces or whitespaces
     let cleanData = newInputTask.trim();
-    if (cleanData == "") {
+    if (cleanData === "") {
       alert("empty input: Try again");
     } else {
       setList((oldItems) => {
