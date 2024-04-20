@@ -1,10 +1,11 @@
 import React from "react";
+import Accordian from "./Myaccordion";
 
 const App = () => {
   return (
     <>
       <h1>Hello World</h1>
-      <h1>Lets create an accordion</h1>
+      <Accordian />
     </>
   );
 };
