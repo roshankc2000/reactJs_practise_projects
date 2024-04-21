@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .header {
@@ -146,5 +147,25 @@ textarea {
 footer {
   width: 100%;
   position: absolute;
+  left: 50%;
   bottom: 0;
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+@media screen and (max-width: 720px) {
+  footer{
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .header img {
+    height: 80px;
+    margin-left: -40px;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 90px;
+  }
 }
