@@ -7,6 +7,7 @@ const CreateNote = () => {
         <input type="text" placeholder="Title" />
         <textarea rows="" column="" placeholder="Write here" />
         <button>Submit 👍</button>
+        
       </form>
     </div>
   );
